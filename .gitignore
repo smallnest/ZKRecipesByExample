@@ -3,7 +3,7 @@
 .settings/*
 .classpath
 .project
-.target/*
+target/*
 
 
 # Mobile Tools for Java (J2ME)

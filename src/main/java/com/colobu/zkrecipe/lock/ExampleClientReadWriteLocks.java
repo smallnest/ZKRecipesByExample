@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.apache.curator.framework.recipes.locks.InterProcessReadWriteLock;
-import org.apache.curator.framework.recipes.locks.InterProcessSemaphoreMutex;
 
 public class ExampleClientReadWriteLocks {
 	private final InterProcessReadWriteLock lock;

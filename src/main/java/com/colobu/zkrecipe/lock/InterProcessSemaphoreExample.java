@@ -9,7 +9,6 @@ import org.apache.curator.framework.recipes.locks.InterProcessSemaphoreV2;
 import org.apache.curator.framework.recipes.locks.Lease;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.curator.test.TestingServer;
-import org.apache.curator.utils.CloseableUtils;
 
 public class InterProcessSemaphoreExample {
 	private static final int MAX_LEASE = 10;
@@ -34,6 +33,7 @@ public class InterProcessSemaphoreExample {
 			System.out.println("Should timeout and acquire return " + leases2);
 
 			System.out.println("return one lease");
+			semaphore.returnLease(lease);
 			System.out.println("return another 5 leases");
 			semaphore.returnAll(leases);
 		}
