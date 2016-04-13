@@ -1,13 +1,13 @@
 package com.colobu.zkrecipe.framework;
 
-import java.util.List;
-
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.api.BackgroundCallback;
 import org.apache.curator.framework.api.CuratorEvent;
 import org.apache.curator.framework.api.CuratorListener;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.Watcher;
+
+import java.util.List;
 
 public class CrudExample {
 

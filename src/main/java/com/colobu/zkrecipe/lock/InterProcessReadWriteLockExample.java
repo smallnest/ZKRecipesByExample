@@ -1,15 +1,15 @@
 package com.colobu.zkrecipe.lock;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.curator.test.TestingServer;
 import org.apache.curator.utils.CloseableUtils;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class InterProcessReadWriteLockExample {
 	private static final int QTY = 5;
@@ -33,7 +33,12 @@ public class InterProcessReadWriteLockExample {
 							for (int j = 0; j < REPETITIONS; ++j) {
 								example.doWork(10, TimeUnit.SECONDS);
 							}
-						} catch (Throwable e) {
+
+						}catch ( InterruptedException e )
+						{
+							Thread.currentThread().interrupt();
+						}
+						catch (Throwable e) {
 							e.printStackTrace();
 						} finally {
 							CloseableUtils.closeQuietly(client);
