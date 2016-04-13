@@ -1,7 +1,10 @@
 ZKRecipesByExample
 ==================
 
-all examples for ZooKeeper recipes by Curator
+all examples for ZooKeeper recipes by Curator.
+
+[![Build Status](https://drone.io/github.com/smallnest/ZKRecipesByExample/status.png)](https://drone.io/github.com/smallnest/ZKRecipesByExample/latest)
+
 
 本项目供了Curator全面的例子， 演示了Curator在项目中的应用，全面的介绍了ZooKeeper的Recipe的实现， 以及CuratorFramework的基本用法。
 每个章节都是独立的， 你可以挑选感兴趣的章节阅读，方便在需要的时候查找。
